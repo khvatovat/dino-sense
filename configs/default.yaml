@@ -1,0 +1,18 @@
+model:
+  name: dinov2_vits14_reg
+  hub_repo: facebookresearch/dinov2
+  embed_dim: 384
+  patch_size: 14
+  n_patches: 256
+
+data:
+  eurosat_root: ./data/eurosat
+  loveda_root: ./data/loveda
+  image_size: 224
+  normalize_mean: [0.485, 0.456, 0.406]
+  normalize_std: [0.229, 0.224, 0.225]
+
+features:
+  output_dir: ./features
+  batch_size: 256
+  patch_dtype: float16
